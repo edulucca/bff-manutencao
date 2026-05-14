@@ -1,0 +1,16 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bff-manutencao
+  title: BFF Portal de Manutenção
+  description: Backend-for-Frontend que agrega dados do histórico e das ordens de serviço para a interface web.
+  tags: [nodejs, typescript, bff]
+spec:
+  type: service
+  lifecycle: production
+  owner: group:squad-maintenance-core
+  system: maintenance-manager
+  consumesApis:
+    - openapi-historico-veiculos # Consome a API de histórico
+    - openapi-ordens-servico     # Consome a API que extraímos antes
